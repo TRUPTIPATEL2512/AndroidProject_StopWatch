@@ -1,20 +1,25 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.truptipatelassignment1">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Declare Wear OS feature -->
+    <uses-feature android:name="android.hardware.type.watch" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.AppCompat.Light">
+        android:label="TruptiPatelAssignment1"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.Material3.Light.NoActionBar">
+        <!-- Main activity of the application -->
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">
+        <!-- Intent filter to launch the main activity when the app starts -->
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+</application>
 
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-
-</manifest>
+    </manifest>

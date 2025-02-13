@@ -1,40 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.wear.widget.BoxInsetLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Centered vertical layout to arrange UI components -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:gravity="center"
-        android:orientation="vertical">
+        android:padding="16dp"
+        android:spacing="20dp">
 
-        <Button
+        <!-- Start Button: Used to start the stopwatch -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start" />
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/start"
+            app:cornerRadius="30dp" />
 
-        <Button
+        <!-- Stop Button: Stops the stopwatch when clicked, initially disabled -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnStop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/stop" />
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/stop"
+            app:cornerRadius="30dp"
+            android:enabled="false"/>
 
-        <Button
+        <!-- Reset Button: Resets the stopwatch to zero, initially disabled -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/reset" />
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/reset"
+            app:cornerRadius="30dp"
+            android:enabled="false" />
 
+        <!-- Timer Text: Displays the elapsed time of the stopwatch -->
         <TextView
             android:id="@+id/txtTimer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/timer"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 

@@ -1,7 +1,10 @@
 <resources>
+    <!-- Application Name -->
     <string name="app_name">TruptiPatelAssignment1</string>
+    <!-- Button Texts -->
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
+    <!-- Default Timer Display -->
     <string name="timer">00:00:00</string>
 </resources>

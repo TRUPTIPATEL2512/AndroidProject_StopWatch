@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    // Define the application namespace
     namespace = "com.example.truptipatelassignment1"
     compileSdk = 35
 
@@ -23,21 +24,29 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    // Enable ViewBinding for better UI management
+    viewBinding {
+        enable = true
     }
 }
 
 dependencies {
     implementation(libs.play.services.wearable)
+    // AndroidX Support Libraries
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-
-    // ✅ Added Wear OS Dependency for BoxInsetLayout
+    // Wear OS specific dependencies
     implementation("androidx.wear:wear:1.2.0")
     implementation("androidx.wear.tiles:tiles:1.1.0")
     implementation("androidx.wear.watchface:watchface:1.1.0")
+    // Material Design components
+    implementation("com.google.android.material:material:1.5.0")
 }
